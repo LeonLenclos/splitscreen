@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TITRE</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <button id="play">play</button>
+        <button id="open-info">info</button>
+        <button id="reload">reload</button>
+    </div>
+
+    <div id="screens">
+        <div class="screen">
+            <video autoplay loop id="cocina" class="on-air">
+                <source src="src/dia01/cocina.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="screen">
+            <video autoplay loop id="cuarto" class="on-air">
+                <source src="src/dia01/cuarto.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="screen">
+            <video autoplay loop id="jardin" class="on-air">
+                <source src="src/dia01/jardin.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="screen" id="death">
+            <video autoplay id="bano-a" class="on-air">
+                <source src="src/dia01/bano_a.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop id="bano-b">
+                <source src="src/dia01/bano_b.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div id="info" class="invisible">
+
+        <h1>Titre</h1>
+        <p>Comment ça marche blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
+        <p>Générique blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
+        <p>Gracias blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
+        <a href="https://www.juliettedominati.com/">Juliette Dominati</a> 2020
+    </div>
+
+    <div id="loading">
+        <p>Loading...</p>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html> 
