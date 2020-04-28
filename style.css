@@ -59,7 +59,7 @@ a:hover{
 }
 .screen {
     padding:10px;
-
+    height: 25%;
     display: flex;
     justify-content: center;
 }
@@ -76,7 +76,7 @@ video.on-air {
     display: block;
 }
 
-.selected, #loading, #info {
+.selected video, #loading, #info {
     position: absolute;
     left:300px;
     top:0;
