@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amalia quiere estar libre - 1</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <div id="speed">
+            <!-- Uncomment to enable -8 and -1 rewind mode -->
+            <!-- <button alt="rewind x8" data-action="speed" data-speed="-8"><img src="icons/rewind3.png"/></button> -->
+            <!-- <button alt="rewind" data-action="speed" data-speed="-1"><img src="icons/rewind1.png"/></button> -->
+            <button alt="rewind x4" data-action="speed" data-speed="-4"><img src="icons/rewind2.png"/></button>
+            <button alt="pause" data-action="speed" data-speed="0"><img src="icons/pause.png"/></button>
+            <button alt="play" data-action="speed" data-speed="1"><img src="icons/play1.png"/></button>
+            <button alt="play x4" data-action="speed" data-speed="4"><img src="icons/play2.png"/></button>
+            <button alt="play x8" data-action="speed" data-speed="8"><img src="icons/play3.png"/></button>
+        </div>
+        <div>
+            <button alt="home" data-action="location" data-page="index.html"><img src="icons/home.png"/></button>
+            <button alt="1" data-action="location" data-page="1.html" disabled>1</button>
+            <button alt="2" data-action="location" data-page="2.html">2</button>
+            <button alt="3" data-action="location" data-page="3.html">3</button>
+        </div>
+        <div>
+            <button alt="settings" data-action="settings"><img src="icons/settings.png"/></button>
+            <button alt="full screen" data-action="fullscreen"><img src="icons/fullscreen.png"/></button>
+        </div>
+    </div>
+    <div id="settings">
+        <div>
+            <button alt="Spanish (no subtitles)" data-action="subtitles" data-lang="es">es</button>
+            <button alt="French subtitles" data-action="subtitles" data-lang="fr">fr</button>
+            <button alt="English subtitles" data-action="subtitles" data-lang="en" disabled>en</button>
+        </div>
+        <div>
+            <button alt="Switch quality to 720p" data-action="quality" data-quality="720p">720p</button>
+            <button alt="Switch quality to 1080p" data-action="quality" data-quality="1080p">1080p</button>
+        </div>
+    </div>
+
+    <div id="screens">
+        <div class="screen">
+            <video data-day='1' data-room='cocina' class="sync loop">
+                <track label="Français" kind="subtitles" srclang="fr">
+            </video>
+        </div>  
+        <div class="screen">
+            <video data-day='1' data-room='cuarto' class="sync loop">
+                <track label="Français" kind="subtitles" srclang="fr">
+            </video>
+        </div>
+        <div class="screen">
+            <video data-day='1' data-room='bano_a' class="sync once">
+                <track label="Français" kind="subtitles" srclang="fr">
+            </video>
+            <video data-day='1' data-room='bano_b' class="loop">
+                <track label="Français" kind="subtitles" srclang="fr">
+            </video>
+        </div>
+        <div class="screen">
+            <video data-day='1' data-room='jardin' class="sync loop">
+                <track label="Français" kind="subtitles" srclang="fr">
+            </video>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="screens.js"></script>
+</body>
+</html> 

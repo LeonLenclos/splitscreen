@@ -12,6 +12,8 @@ html, body{
 body {
     background: black;
     color: white;
+         font-size:12pt;
+
 }
 
 .invisible {
@@ -19,36 +21,72 @@ body {
 }
 
 #screens {
-    height: calc(100% - 40px);
-    width: 300px;
-
+    padding: 5px;
+    height: calc(100% - 50px);
+    width: calc(304px + 5px + 5px);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-#controls {
-    height: 40px;
-    width: 300px;
-    padding:10px;
 
+#controls {
+    width: calc(100%-10px);
+    padding:5px;
     display: flex;
     justify-content: space-between;
 }
 
-button{
-    border: 2px solid #aaa;
+#settings {
+    z-index: 1;
+    position: absolute;
+    right:5px;
+    border: 2px inset black;
+    background: #222;
+    width:400px;
+    padding:5px;
+    display:none;
+    justify-content: space-between;
+}
+
+#controls div, #settings div, nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+button, nav a, nav a:visited{
+        text-decoration: none;
+
+display: block;
+min-width: 40px;
+text-align: center;
+    
+    height: 25px;
+    margin:2px;
+    
+    border: 2px outset black;
+    
     color: black;
-    background: gray;
+    background: #999;
     font-weight: bold;
     cursor: pointer;
 }
-button:hover {
-    background: white;
+
+button:hover, nav a:hover {
+    background: #bbb;
+    color:black;
 }
-button:disabled {
-    cursor: not-allowed;
-    color: #555;
+
+button:disabled, nav a:disabled {
+    background: #777;
+    border-style:inset;
+}
+
+button img, nav a img {
+    height: 100%;
 }
 
 a, a:visited{
@@ -58,10 +96,14 @@ a:hover{
     color:white;
 }
 .screen {
-    padding:10px;
-    height: 25%;
+/*    margin: 10px;*/
+    height: 175px;
+    width:308;
     display: flex;
     justify-content: center;
+    background: #000;
+    border:2px outset black;
+
 }
 
 video {
@@ -69,6 +111,7 @@ video {
     max-width: 100%;
     max-height: 100%;
     cursor: pointer;
+    outline:none;
 
 }
 
@@ -78,11 +121,11 @@ video.on-air {
 
 .selected video, #loading, #info {
     position: absolute;
-    left:300px;
-    top:0;
+    left:315px;
+    top:50px;
     
-    width: calc(100% - 300px);
-    height: 100%;
+    width: calc(100% - 320px);
+    height: calc(100% - 55px);
 }
 
 #loading, #info {
@@ -97,3 +140,111 @@ video.on-air {
  #info *{
     max-width: 500px;
  }
+
+video {
+    background-image: url('loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+#content {
+    min-height: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column:hover {
+    background-color: #eee;
+    color:#111;
+
+}
+.column {
+    background-color: #ccc;
+    color: #333;
+
+    width:450px;
+    max-height: 90vh;
+    margin:10px auto;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.column nav {
+    margin:70px 0;
+}
+
+.column nav a{
+    margin: 10px;
+    height: 30px;
+    width:70px;
+    line-height: 25px;
+}
+h1{
+    text-align: center;
+             font-size:16pt;
+
+}
+h2{
+    text-align: center;
+             font-size:14pt;
+
+}
+h3{
+    text-align: center;
+             font-size:10pt;
+    margin:0;
+
+}
+
+
+		dl {
+    margin-top:0;
+    margin-bottom:35px;
+            font-size:10pt;
+}
+
+		dl div {
+			/* Setup the DT (character) and DD (cast) items as a flexible layout. */
+			display: flex ;
+	       margin: 5px 0px;
+		}
+
+		dl dt {
+			/*
+				Setup the DT element as a NESTED flexible layout. This will control the
+				IMPLICIT TEXT element (character) and the :after pseudo-element (dots)
+				layouts.
+			*/
+			display: flex ;
+			/* Setup the DT (character) element to grow and take-up space. */
+			flex: 1 1 auto;
+            margin: 0;
+                        text-align: left;
+
+		}
+
+		dl dt:after {
+			border-bottom: 1px dotted #555;
+			content: "" ;
+			/*
+				Setup the pseudo-element (dots) to grow and take-up space. This will fill
+				the white-space with "dots" because it growing inside of another layout
+				which is also growing.
+			*/
+			flex: 1 1 auto ;
+			margin: 0px 5px 6px 5px;
+            
+		}
+
+		dl dd {
+			/* Setup the DD (cast) element to shrink, allow for dots to fill space. */
+			flex: 0 1 auto ;
+			margin: 0px 0px 0px 0px ;
+            text-align: right;
+}
